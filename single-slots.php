@@ -191,7 +191,17 @@ $currentId = get_the_ID();
             </div>
           </div>
         </div>
-        <?php $cover = carbon_get_the_post_meta('crb_slot_cover'); if ($cover): ?>
+        <?php
+          $args = array( 
+            'post_type' => 'attachment', 
+            'post_mime_type' => 'image',
+            'numberposts' => -1, 
+            'post_status' => null, 
+            'post_parent' => $post->ID 
+          ); 
+          $attached_images = get_posts( $args );
+          ?>
+        <?php $cover = $attached_images[0]->guid; if ($cover): ?>
           <img class="w-full object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $cover; ?>" loading="lazy">
         <?php endif; ?>
         <div>
