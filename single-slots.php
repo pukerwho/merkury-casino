@@ -200,7 +200,6 @@ $currentId = get_the_ID();
             'post_parent' => $post->ID 
           ); 
           $attached_images = get_posts( $args );
-          var_dump($attached_images);
           ?>
         <?php $cover = $attached_images[0]->guid; if ($cover): ?>
           <img class="w-full object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $cover; ?>" loading="lazy">
