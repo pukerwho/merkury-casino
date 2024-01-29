@@ -41,7 +41,7 @@ $currentId = get_the_ID();
     <div class="flex flex-wrap lg:-mx-6">
       <div class="w-full lg:w-8/12 lg:px-6 mb-6 lg:mb-0">
         <div class="mb-6">
-          <h2 class="h2 inline-block bg-blue-500 text-white rounded px-4 py-2 mb-4"><?php _e("Общая информация", "treba-wp"); ?></h2>
+          <h2 class="h2 inline-block bg-black/90 text-white rounded -rotate-1 px-4 py-2 mb-4"><?php _e("Общая информация", "treba-wp"); ?></h2>
           <div class="mb-4"><?php _e("Что известно про слот", "treba-wp"); ?> <span class="font-bold"><?php the_title(); ?></span>:</div>
           <div>
             <table class="w-full table-fixed border border-gray-400">
@@ -99,11 +99,11 @@ $currentId = get_the_ID();
           </div>
         </div>
         <div class="mb-2">
-          <h2 class="h2 inline-block bg-blue-500 text-white rounded px-4 py-2 mb-4"><?php _e("Наши оценки", "treba-wp"); ?></h2>
+          <h2 class="h2 inline-block bg-black/90 text-white rounded -rotate-1 px-4 py-2 mb-4"><?php _e("Наши оценки", "treba-wp"); ?></h2>
           <div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Общая тема", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_theme"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_theme"); ?> / 100</span>
@@ -114,7 +114,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Геймплей", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_gameplay"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_gameplay"); ?> / 100</span>
@@ -125,7 +125,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Дизайн и графика", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_design"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_design"); ?> / 100</span>
@@ -136,7 +136,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Звуковые эффекты", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_audio"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_audio"); ?> / 100</span>
@@ -147,7 +147,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Музыка в игре", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_music"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_music"); ?> / 100</span>
@@ -158,7 +158,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Бонусы и фишки", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_bonus"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_bonus"); ?> / 100</span>
@@ -169,7 +169,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Уровень сложности", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_difficult"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_difficult"); ?> / 100</span>
@@ -180,7 +180,7 @@ $currentId = get_the_ID();
             </div>
             <div class="flex items-center mb-4">
               <div class="w-1/2 lg:w-2/5 text-gray-600 whitespace-nowrap mr-6"><?php _e("Оригинальность", "treba-wp"); ?>: </div>
-              <div class="w-1/2 lg:w-3/2 rating-row relative font-semibold">
+              <div class="w-1/2 lg:w-3/5 rating-row relative font-semibold">
                 <div class="flex items-center text-sm text-center border bg-gray-200 rounded-xl py-1">
                   <div class="relative z-1" style="width:<?php echo carbon_get_the_post_meta("crb_slot_rating_original"); ?>%">
                     <span><?php echo carbon_get_the_post_meta("crb_slot_rating_original"); ?> / 100</span>
@@ -272,7 +272,10 @@ $currentId = get_the_ID();
 
 <div class="bg-white py-8">
   <div class="container">
-    <h2 class="h2 mb-6"><?php _e("Похожие слоты", "treba-wp"); ?></h2>
+    <div class="text-center">
+      <h2 class="h2 inline-block bg-black/90 text-white rounded -rotate-1 px-4 py-2 mb-6"><?php _e("Похожие слоты", "treba-wp"); ?></h2>
+    </div>
+    
     <div class="flex flex-wrap -mx-2">
       <?php 
       $slots = new WP_Query( array( 
