@@ -101,9 +101,9 @@ if ( is_singular( 'slots' ) ) {
     <div class="hidden md:block bg-black/90 py-3">
       <div class="container">
         <ul class="flex items-center -mx-4">
-          <li class="px-4"><a href="#" class="text-gray-200">👋 <?php _e("Про нас", "treba-wp"); ?></a></li>
-          <li class="px-4"><a href="#" class="text-gray-200">📝 <?php _e("Блог", "treba-wp"); ?></a></li>
-          <li class="px-4"><a href="#" class="text-gray-200">📬 <?php _e("Контакты", "treba-wp"); ?></a></li>
+          <li class="px-4"><a href="/about" class="text-gray-200">👋 <?php _e("Про нас", "treba-wp"); ?></a></li>
+          <li class="px-4"><a href="<?php echo get_page_url("page-blog"); ?>" class="text-gray-200">📝 <?php _e("Блог", "treba-wp"); ?></a></li>
+          <li class="px-4"><a href="/contacts" class="text-gray-200">📬 <?php _e("Контакты", "treba-wp"); ?></a></li>
         </ul>
       </div>
     </div>
