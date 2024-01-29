@@ -27,14 +27,13 @@ function crb_post_theme_options() {
       Field::make( 'text', 'crb_slot_volatilyti', 'Волатильність' ),
       Field::make( 'text', 'crb_slot_maxwin', 'Максимальний виграш' ),
       Field::make( 'text', 'crb_slot_qtyline', 'Кількість ліній' ),
-      Field::make( 'text', 'crb_slot_gamepole', 'Ігрове поле' ),
-      Field::make( 'text', 'crb_slot_popular', 'Популярність' ),
-      Field::make( 'multiselect', 'crb_slot_lang', 'Мова' )
-      ->add_options( array(
-        'Українська' => 'Українська',
-        'Російська' => 'Російська',
-        'Англійська' => 'Англійська',
-      ) ),
+      Field::make( 'text', 'crb_slot_reels', 'Кіл-сть барабанів' ),
+      Field::make( 'text', 'crb_slot_rows', 'Кіл-сть рядів' ),
+      Field::make( 'text', 'crb_slot_frequency', 'Частота выигрышей' ),
+      Field::make( 'text', 'crb_slot_max_win_prob', 'Максимальная вероятность выигрыша' ),
+      Field::make( 'text', 'crb_slot_bonusraund', 'Бонусный раунд' ),
+      Field::make( 'text', 'crb_slot_minbet', 'Минимальная ставка' ),
+      Field::make( 'text', 'crb_slot_maxbet', 'Максимальная ставка' ),
     ))
     ->add_tab( __('Rating'), array(
       Field::make( 'text', 'crb_slot_rating_gameplay', 'Геймплей' ),
