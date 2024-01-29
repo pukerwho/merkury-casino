@@ -68,7 +68,7 @@ $currentId = get_the_ID();
                 </tr>
                 <tr class="border-b border-gray-400">
                   <td class="border-r border-gray-400 p-2">📈 <?php _e("RTP", "treba-wp"); ?></td>
-                  <td class="p-2"><?php echo carbon_get_the_post_meta("crb_slot_rtp"); ?></td>
+                  <td class="p-2"><?php echo carbon_get_the_post_meta("crb_slot_rtp"); ?>%</td>
                 </tr>
                 <tr class="border-b border-gray-400">
                   <td class="border-r border-gray-400 p-2">🎲 <?php _e("Частота выигрышей", "treba-wp"); ?></td>
@@ -200,10 +200,11 @@ $currentId = get_the_ID();
             'post_parent' => $post->ID 
           ); 
           $attached_images = get_posts( $args );
-          ?>
-        <?php $cover = $attached_images[0]->guid; if ($cover): ?>
-          <img class="w-full object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $cover; ?>" loading="lazy">
-        <?php endif; ?>
+          foreach ($attached_images as $img): ?>
+            <?php if ($img->guid != $logo): ?>
+              <img class="w-full object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $img->guid; ?>" loading="lazy">
+            <?php endif; ?>
+          <?php endforeach; ?>
         <div>
           <div class="flex items-center mb-2">
             <div class="mr-2">
