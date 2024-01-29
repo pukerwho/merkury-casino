@@ -3,14 +3,9 @@ $current_title = wp_get_document_title();
 
 // FOR Main Page
 if ( is_home() ) {
-  $home_title = crb_get_i18n_theme_option('crb_seo_mainpage_title'); 
-  $home_description = crb_get_i18n_theme_option('crb_seo_mainpage_description'); 
-  if ($home_title) {
-    $current_title = $home_title;
-  }
-  if ($home_description) {
-    $current_description = $home_description;
-  }
+  $home_title = "Крути слоты: честные обзоры игровых автоматов";
+  $home_description = "На сайте представлена подробная информация про популярные игровые автоматы. Характеристики, оценки, отзывы. На сайте merkury.com.ua.";
+  
 }
 
 // FOR POSTs
@@ -39,8 +34,9 @@ if ( is_singular( 'casino' ) ) {
 
 // FOR SLOTS
 if ( is_singular( 'slots' ) ) {
-  $post_title = carbon_get_the_post_meta('crb_slot_title');
-  $post_description = carbon_get_the_post_meta('crb_slot_description');
+  $get_name = get_the_title();
+  $post_title = $get_name . ': обзор, как играть, правила, отзывы';
+  $post_description = "Игровой автомат " .$get_name. ": как правильно играть, чтобы выигрывать. Отзывы про слот " .$get_name. ". Честный обзор читайте на сайте.";
   if ($post_title) {
     $current_title = $post_title;
   }
