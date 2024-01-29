@@ -1,0 +1,36 @@
+/*!******************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/main.scss ***!
+  \******************************************************************************************************************************************************/
+body {
+  font-family: BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.breadcrumbs_item {
+  position: relative;
+}
+.breadcrumbs_item:first-of-type {
+  background: url(9a15a9b92b490c009e1c.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.breadcrumbs_item:last-of-type:after {
+  content: none;
+}
+.breadcrumbs_item:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 51%;
+  right: -1.5rem;
+  background: url(bd31478893bafd82eb37.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%) translateX(-100%);
+  -ms-transform: translateY(-50%) translateX(-100%);
+  transform: translateY(-50%) translateX(-100%);
+}
+
+.nav-links:not(:last-of-type):after {
+  content: "|";
+}

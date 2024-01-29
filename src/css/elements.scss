@@ -1,0 +1,39 @@
+body {
+  font-family: BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.breadcrumbs {
+  &_item {
+    position: relative;
+    &:first-of-type {
+      background: url("../../images/home.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
+    }
+    &:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 51%;
+      right: -1.5rem;
+      background: url("../../images/breadcrumbs-arrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-transform: translateY(-50%) translateX(-100%);
+      -ms-transform: translateY(-50%) translateX(-100%);
+      transform: translateY(-50%) translateX(-100%);
+    }
+  }
+}
+
+.nav-links {
+  &:not(:last-of-type):after {
+    content: "|";
+  }
+}
