@@ -146,8 +146,8 @@ if ( is_singular( 'slots' ) ) {
     </div>
     <!-- END BOTTOM HEADER -->
 
-    <div class="casino-modal w-full absolute left-0 bg-white hidden pt-4 z-1">
-      <div class="container">
+    <div class="casino-modal w-full absolute left-0 bg-white hidden py-4 z-10">
+      <div class="container relative z-10">
         <div class="flex bg-black/90 shadow rounded py-4">
           <!-- Favbet -->
           <div class="w-1/4 border-r border-yellow-200 px-4">
