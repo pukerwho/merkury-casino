@@ -123,7 +123,7 @@ if ( is_singular( 'slots' ) ) {
                   </svg>
                 </div>
               </li>
-              <li class="px-4">👨‍💻 <a href="<?php echo get_page_url("page-categories"); ?>" class="text-gray-800"><?php _e("Розработчики", "treba-wp"); ?></a></li>
+              <li class="px-4">👨‍💻 <a href="<?php echo get_page_url("page-categories"); ?>" class="text-gray-800"><?php _e("Разработчики", "treba-wp"); ?></a></li>
               <li class="px-4">📣 <a href="<?php echo get_page_url("page-cities"); ?>" class="text-gray-800"><?php _e("Отзывы", "treba-wp"); ?></a></li>
             </ul>
           </nav>

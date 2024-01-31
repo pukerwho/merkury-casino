@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: Розработчики
+Template Name: Разработчики
 */
 ?>
 <?php get_header(); ?>
 
 <div class="container my-6">
-  <h1 class="text-3xl lg:text-4xl text-center text-white font-extrabold -rotate-1 mb-6"><span class="bg-blue-500 rounded px-4 py-2"><?php _e("Розработчики", "treba-wp"); ?></span></h1>
+  <h1 class="text-3xl lg:text-4xl text-center text-white font-extrabold -rotate-1 mb-6"><span class="bg-blue-500 rounded px-4 py-2"><?php _e("Разработчики", "treba-wp"); ?></span></h1>
   <?php 
     $providers = get_terms( array(
       'taxonomy'   => 'providers',
