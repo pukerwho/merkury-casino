@@ -253,6 +253,18 @@ $currentId = get_the_ID();
             </div>
             <div class="px-4"><a href="" class="inline-block w-full bg-custom-yellow text-center text-black rounded px-4 py-2">Играть</a></div>
           </div>
+          <div class="border-b border-gray-600 py-4">
+            <div class="flex flex-wrap items-center mb-4">
+              <div class="w-1/3 px-4">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slotoking-logo.svg" alt="Slotoking" loading="lazy" >
+              </div>
+              <div class="w-2/3 px-4">
+                <div class="text-2xl font-extrabold">Slotoking</div>
+                <div class="text-custom-yellow">Бонус за первые 5 депозитов 125 000 ₴ + 500 FS</div>
+              </div>
+            </div>
+            <div class="px-4"><a href="" class="inline-block w-full bg-custom-yellow text-center text-black rounded px-4 py-2">Играть</a></div>
+          </div>
           <div class="py-4">
             <div class="flex flex-wrap items-center mb-4">
               <div class="w-1/3 px-4">

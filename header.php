@@ -106,40 +106,108 @@ if ( is_singular( 'slots' ) ) {
     <!-- END TOP HEADER -->
 
     <!-- BOTTOM HEADER -->
-    <div class="py-4">
-      <div class="container">
-        <div class="flex flex-wrap items-center justify-between">
-          <div>
-            <a href="<?php echo get_home_url(); ?>" class="bg-blue-500 rounded px-4 py-2 text-xl text-white font-extrabold">Merkury</a>
-          </div>
-          <div class="ml-10">
-            <nav class="hidden md:block menu">
-              <ul class="flex items-center -mx-4">
-                <li class="px-4">🎰 <a href="<?php echo get_post_type_archive_link("e"); ?>" class="text-gray-800"><?php _e("Слоты", "treba-wp"); ?></a></li>
-                <li class="px-4">🎲 <a href="<?php echo get_page_url("page-reviews"); ?>" class="text-gray-800"><?php _e("Казино", "treba-wp"); ?></a></li>
-                <li class="px-4">👨‍💻 <a href="<?php echo get_page_url("page-categories"); ?>" class="text-gray-800"><?php _e("Розработчики", "treba-wp"); ?></a></li>
-                <li class="px-4">📣 <a href="<?php echo get_page_url("page-cities"); ?>" class="text-gray-800"><?php _e("Отзывы", "treba-wp"); ?></a></li>
-              </ul>
-            </nav>
-            <!-- Mobile toggle -->
-            <div class="block md:hidden">
-              <div class="menu-open-js">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              </div>
-              <div class="menu-close-js hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
+    <div class="container">
+      <div class="flex flex-wrap items-center justify-between relative py-4">
+        <div>
+          <a href="<?php echo get_home_url(); ?>" class="bg-blue-500 rounded px-4 py-2 text-xl text-white font-extrabold">Merkury</a>
+        </div>
+        <div class="ml-10">
+          <nav class="hidden md:block menu">
+            <ul class="flex items-center -mx-4">
+              <li class="px-4">🎰 <a href="<?php echo get_post_type_archive_link("slots"); ?>" class="text-gray-800"><?php _e("Слоты", "treba-wp"); ?></a></li>
+              <li class="flex items-center text-gray-800 px-4 casino-modal-click-js">
+                <div class="cursor-pointer mr-1">🎲 <?php _e("Казино", "treba-wp"); ?></div>
+                <div class="casino-menu-arrow rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </div>
+              </li>
+              <li class="px-4">👨‍💻 <a href="<?php echo get_page_url("page-categories"); ?>" class="text-gray-800"><?php _e("Розработчики", "treba-wp"); ?></a></li>
+              <li class="px-4">📣 <a href="<?php echo get_page_url("page-cities"); ?>" class="text-gray-800"><?php _e("Отзывы", "treba-wp"); ?></a></li>
+            </ul>
+          </nav>
+          <!-- Mobile toggle -->
+          <div class="block md:hidden">
+            <div class="menu-open-js">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
             </div>
-            <!-- END Mobile toggle -->
+            <div class="menu-close-js hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
           </div>
+          <!-- END Mobile toggle -->
         </div>
       </div>
     </div>
     <!-- END BOTTOM HEADER -->
+
+    <div class="casino-modal w-full absolute left-0 bg-white hidden pt-4 z-1">
+      <div class="container">
+        <div class="flex bg-black/90 shadow rounded py-4">
+          <!-- Favbet -->
+          <div class="w-1/4 border-r border-yellow-200 px-4">
+            <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/favbet-logo.svg" alt="Favbet" loading="lazy" class="w-full text-center h-[45px]"></div>
+            <div>
+              <div class="text-2xl text-white font-extrabold text-center mb-4">Favbet</div>
+              <div class="hidden text-custom-yellow text-sm text-center mb-4">Приветственный бонус до 10 000 ₴</div>
+              <div class="text-center mb-4">
+                <div class="w-full mb-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stars.svg" class="mx-auto"></div>
+                <div class="text-white text-xl font-bold">4.7 / 5</div>
+              </div>
+              <div><a href="" class="inline-block w-full bg-custom-yellow text-center text-black rounded px-4 py-2">Играть</a></div>
+            </div>
+          </div>
+          <!-- END Favbet -->
+          <!-- Slots City -->
+          <div class="w-1/4 border-r border-yellow-200 px-4">
+            <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slots-city-logo.svg" alt="Slots City" loading="lazy" class="w-full text-center h-[45px]"></div>
+            <div>
+              <div class="text-2xl text-white font-extrabold text-center mb-4">Slots City</div>
+              <div class="hidden text-custom-yellow text-sm text-center mb-4">Новым игрокам +200 000 ₴ и 500 FS</div>
+              <div class="text-center mb-4">
+                <div class="w-full mb-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stars.svg" class="mx-auto"></div>
+                <div class="text-white text-xl font-bold">4.9 / 5</div>
+              </div>
+              <div><a href="" class="inline-block w-full bg-custom-yellow text-center text-black rounded px-4 py-2">Играть</a></div>
+            </div>
+          </div>
+          <!-- END Slots City -->
+          <!-- Slotoking -->
+          <div class="w-1/4 border-r border-yellow-200 px-4">
+            <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slotoking-logo.svg" alt="Slotoking" loading="lazy" class="w-full text-center h-[45px]"></div>
+            <div>
+              <div class="text-2xl text-white font-extrabold text-center mb-4">Slotoking</div>
+              <div class="hidden text-custom-yellow text-sm text-center mb-4">Бонус за первые 5 депозитов 125 000 ₴ + 500 FS</div>
+              <div class="text-center mb-4">
+                <div class="w-full mb-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stars.svg" class="mx-auto"></div>
+                <div class="text-white text-xl font-bold">4.8 / 5</div>
+              </div>
+              <div><a href="" class="inline-block w-full bg-custom-yellow text-center text-black rounded px-4 py-2">Играть</a></div>
+            </div>
+          </div>
+          <!-- END Slotoking -->
+          <!-- Pin-up -->
+          <div class="w-1/4 px-4">
+            <div class="mb-4"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/pinup-logo.svg" alt="Pin-up" loading="lazy" class="w-full text-center h-[45px]"></div>
+            <div>
+              <div class="text-2xl text-white font-extrabold text-center mb-4">Pin-up</div>
+              <div class="hidden text-custom-yellow text-sm text-center mb-4">Бонус за 1 депозит +400% и 250 FS</div>
+              <div class="text-center mb-4">
+                <div class="w-full mb-2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/stars.svg" class="mx-auto"></div>
+                <div class="text-white text-xl font-bold">4.9 / 5</div>
+              </div>
+              <div><a href="" class="inline-block w-full bg-custom-yellow text-center text-black rounded px-4 py-2">Играть</a></div>
+            </div>
+          </div>
+          <!-- END Pin-up -->
+        </div>
+      </div>
+    </div>
 
     <!-- Mobile menu --> 
     <div class="mobile-menu hidden">
@@ -158,10 +226,8 @@ if ( is_singular( 'slots' ) ) {
           </div>
         </div>
       </div>
-      
     </div>
     <!-- END Mobile menu --> 
-    
   </header>
 
   <div class="mobile-menu -translate-x-full">

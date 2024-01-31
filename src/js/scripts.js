@@ -12,3 +12,8 @@ $(".js-mobile-menu-close").on("click", function(){
   $(".js-mobile-menu-open").removeClass("hidden");
   $(".mobile-menu").removeClass("translate-x-0").addClass("-translate-x-full");
 });
+
+$(".casino-modal-click-js").on("click", function(){
+  $(".casino-menu-arrow").toggleClass("rotate-180");
+  $(".casino-modal").toggleClass("hidden");
+});
