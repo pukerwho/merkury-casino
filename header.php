@@ -117,7 +117,7 @@ if ( is_singular( 'slots' ) ) {
               <li class="px-4">🎰 <a href="<?php echo get_post_type_archive_link("slots"); ?>" class="text-gray-800"><?php _e("Слоты", "treba-wp"); ?></a></li>
               <li class="flex items-center text-gray-800 px-4 casino-modal-click-js">
                 <div class="cursor-pointer mr-1">🎲 <?php _e("Казино", "treba-wp"); ?></div>
-                <div class="casino-menu-arrow rotate-180">
+                <div class="casino-menu-arrow">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                   </svg>
