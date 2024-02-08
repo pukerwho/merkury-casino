@@ -134,14 +134,12 @@
         <div class="w-full first-of-type:lg:w-1/2 lg:w-1/4 group is-post px-4 mb-4">
           <div class="relative">
             <a href="<?php the_permalink(); ?>" class="w-full h-full absolute left-0 top-0 z-2"></a>
-            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="<?php the_title(); ?>" class="w-full h-[450px] object-cover">
-            <div class="w-full h-full absolute left-0 top-0 z-1 bg-gradient-to-b from-transparent to-black/80"></div>
+            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="<?php the_title(); ?>" class="w-full h-[450px] object-cover rounded">
+            <div class="w-full h-full absolute left-0 top-0 z-1 bg-gradient-to-b from-transparent to-black/80 rounded"></div>
             <div class="w-full absolute bottom-0 left-0 z-1 p-6">
               <div class="group-[:first-of-type]:text-2xl text-xl text-white"><?php the_title(); ?></div>
             </div>
-            
           </div>
-          
         </div>
       <?php endwhile; endif; wp_reset_postdata(); ?>
     </div>
